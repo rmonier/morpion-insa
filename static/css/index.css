@@ -1,0 +1,87 @@
+html {
+    background-image: url("../img/Web_1920_3.png") ;
+    background-size: 100%;
+}
+
+a {
+    text-decoration:none ;
+    color:white ;
+}  
+
+main {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+
+
+h1 {
+    border-top: 3px solid white;
+    font-style: italic;
+    padding-top: 40px ;
+    padding-bottom: 40px ;
+    font-size: 55px;
+    margin-top: min(100px, 10%);
+    margin-bottom: 0px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}  
+
+h2 {
+    font-size: 12px ;
+    font-style: italic;
+    border-top:3px solid white ;
+    padding:5px;
+    width: 550px ;
+    margin-bottom: min(150px, 15%);
+}
+
+footer ul {
+    display: flex;
+}
+
+footer li:nth-child(1) {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+footer li:nth-child(2){
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+h1, h2, button {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1, h2, button, footer {
+    font-family: fantasy;
+    color:white ;
+}
+
+button {
+    background-color: transparent;
+    border:1.5px solid white;
+    border-radius:30px;
+    padding: 7px;
+    font-size: 1em;
+    width: 180px;
+    margin-right: 50px ;
+}
+
+li{
+    list-style: none ;
+}
+
+.boutons {
+    display: flex;
+}
+
+h1, h2 {
+    transform: rotate(-9deg);
+}
