@@ -74,7 +74,7 @@ h1 {
 }
 
 
-main p {
+main {
     font-size:15px ;
     color:gainsboro;
     padding-left:200px ;
@@ -130,4 +130,9 @@ footer li:nth-child(3) {
     position: absolute;
     bottom: 30px ;
     right: 30px;
+}
+
+footer a:hover {
+    text-shadow: 0.1em -0.1em #358fa3;
+    border-bottom:2px solid purple;
 }
