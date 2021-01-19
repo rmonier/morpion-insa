@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Morpion",
+    "short_name": "Morpion",
     "icons": [
         {
             "src": "static/img/icon/android-chrome-192x192.png",
@@ -8,7 +8,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#358fa3",
+    "background_color": "#358fa3",
     "display": "standalone"
 }
