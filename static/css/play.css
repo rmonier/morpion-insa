@@ -1,3 +1,41 @@
+nav li:nth-child(2){
+    text-shadow: 0.1em -0.1em #358fa3;
+    border-bottom:3px solid purple;
+    font-size: 40px;
+}
+
+header {
+    margin-bottom: 140px;
+}
+
+button {
+    font-family: 'Agency FB' ;
+    color:white ;
+    background-color: transparent;
+    border:1.5px solid white;
+    border-radius:30px;
+    padding: 7px;
+    font-size: 1em;
+    width: 180px;
+    margin-right: 50px ;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255, 0.2);
+}
+
+main
+{
+    
+}
+
+#morpion
+{
+    
+}
+
 #board
 {
     display: grid;
@@ -11,6 +49,7 @@
 
 #infos
 {
+    color : white;
     margin: auto;
     text-align: center;
 }

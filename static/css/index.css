@@ -10,7 +10,7 @@ html, button {
 a {
     text-decoration:none ;
     color:white ;
-}  
+}
 
 main {
     display: flex;
@@ -19,7 +19,7 @@ main {
 }
 
 h2 > span {
-      
+
     -webkit-text-stroke: 2px white ;
     -webkit-text-fill-color: transparent;
 }
@@ -37,7 +37,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     letter-spacing: 5px;
-}  
+}
 
 h3 {
     font-size: 11.5px ;
@@ -72,7 +72,7 @@ h2, h3, button {
 }
 
 h2, h3, button, footer {
-    
+
     color:white ;
 }
 

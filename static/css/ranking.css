@@ -1,72 +1,10 @@
-html{
-    background-color:rgb(24, 41, 41);
-    font-family: 'Agency FB';
-}
-
-li{
-    list-style: none ;
-}
-
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-nav {
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    font-size: 30px;
-    padding: 0 ;
-    margin: 0 ;
-}
-
-nav li:hover {
-    /*text-shadow: -10px 0 cornflowerblue, 0 0px cornflowerblue, 0px 0 cornflowerblue, 0 -10px cornflowerblue ; */
-    text-shadow: 0.1em -0.1em #358fa3;
-    border-bottom:3px solid purple;
-}
-
-nav li {
-    margin-left:2px;
-    float:left;
-
-}
-
-nav li a {
-    width:100px;
-    padding:5px;
-}
-
-nav li:nth-child(1){
-    position: absolute;
-    transform: rotate(-9deg);
-    top: 30px;
-    left: 30px;
-    
-}
-
-
-nav li:nth-child(2){
-    position:fixed;
-    transform: rotate(-9deg);
-    top: 30px;
-    left: 50%;
-}
-
-
 nav li:nth-child(3){
-    position: absolute;
-    transform: rotate(-9deg);
-    top: 30px ;
-    right: 30px;
     text-shadow: 0.1em -0.1em #358fa3;
     border-bottom:3px solid purple;
     font-size: 40px;
 }
 
-h1 {
+h2 {
     font-size:60px ;
     font-variant: small-caps;
     color:gainsboro;
@@ -83,54 +21,4 @@ main {
     padding-left:200px ;
     text-align: justify;
     
-}
-
-
-footer ul {
-    display: flex;
-    color:white;
-}
-
-footer li:nth-child(1) {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-}
-
-footer li:nth-child(1) a {
-    text-transform: uppercase;
-    font-style: italic;
-    font-weight: bold;
-}
-
-footer li:nth-child(2){
-    width: 600px;
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    font-style: italic;
-    
-}
-
-
-footer li:nth-child(2) p {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-
-footer li:nth-child(2) a {
-    -webkit-text-stroke: 0.5px white ;
-    -webkit-text-fill-color: transparent;
-}
-
-footer li:nth-child(3) {
-    position: absolute;
-    bottom: 30px ;
-    right: 30px;
-}
-
-footer a:hover {
-    text-shadow: 0.1em -0.1em #358fa3;
-    border-bottom:2px solid purple;
 }
