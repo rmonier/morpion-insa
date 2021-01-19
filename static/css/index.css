@@ -1,5 +1,3 @@
-@import url(https://fr.allfont.net/allfont.css?fonts=agency-fb);
-
 html {
     background-image: url("../img/Web_1920_3.png") ;
     background-size: 100%;
@@ -20,13 +18,13 @@ main {
     align-items: center;
 }
 
-h1 > span {
+h2 > span {
       
     -webkit-text-stroke: 2px white ;
     -webkit-text-fill-color: transparent;
 }
 
-h1 {
+h2 {
     border-top: 3px solid white;
     font-style: italic;
     padding-top: 40px ;
@@ -41,7 +39,7 @@ h1 {
     letter-spacing: 5px;
 }  
 
-h2 {
+h3 {
     font-size: 11.5px ;
     font-style: italic;
     border-top:3px solid white ;
@@ -68,12 +66,12 @@ footer li:nth-child(2){
     right: 30px;
 }
 
-h1, h2, button {
+h2, h3, button {
     text-transform: uppercase;
     text-align: center;
 }
 
-h1, h2, button, footer {
+h2, h3, button, footer {
     
     color:white ;
 }
@@ -102,6 +100,6 @@ li{
     display: flex;
 }
 
-h1, h2 {
+h2, h3 {
     transform: rotate(-9deg);
 }

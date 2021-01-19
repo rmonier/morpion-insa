@@ -5,3 +5,9 @@
     font-weight: 400;
     src: local('Agency FB'), local('AgencyFB-Regular'), url("static/font/agency-fb.woff") format('woff'), url("static/font/agency-fb.ttf") format('truetype')
 }
+
+header h1, header h1 img
+{
+    width: 50vw;
+    margin: auto;
+}
