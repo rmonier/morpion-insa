@@ -1,4 +1,10 @@
-@import url(https://fr.allfont.net/allfont.css?fonts=agency-fb);
+@font-face
+{
+    font-family: agency fb;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Agency FB'), local('AgencyFB-Regular'), url("static/font/agency-fb.woff") format('woff'), url("static/font/agency-fb.ttf") format('truetype')
+}
 
 html{
     background-color:rgb(24, 41, 41);

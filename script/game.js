@@ -14,7 +14,7 @@ const PATH_PLAYER_2 = "static/img/player2.png";
 
 let last_id_case = 0;
 let game = null;
-let grid_lines;
+let grid_lines, nom_joueur1, nom_joueur2;
 
 START.addEventListener("click", launchGame);
 
@@ -121,15 +121,15 @@ Case.prototype.changeType = function(type, img_src = undefined)
             if(this.imgSrc === undefined)
                 this.imgSrc = PATH_PLAYER_1_CASE;
             this.element.src = this.imgSrc;
-            this.element.alt = "JOUEUR 1";
-            this.element.title = "JOUEUR 1";
+            this.element.alt = nom_joueur1;
+            this.element.title = nom_joueur1;
         break;
         case CaseType.PLAYER_2_CASE:
             if(this.imgSrc === undefined)
                 this.imgSrc = PATH_PLAYER_2_CASE;
             this.element.src = this.imgSrc;
-            this.element.alt = "JOUEUR 2";
-            this.element.title = "JOUEUR 2";
+            this.element.alt = nom_joueur2;
+            this.element.title = nom_joueur2;
         break;
         default:
             if(this.imgSrc === undefined)
@@ -162,16 +162,25 @@ function launchGame()
 {
     last_id_case = 0;
 
-    grid_lines = 3;
-    if(parseInt(LIGNES.value) > 1 && parseInt(LIGNES.value) <= 30)
+    if(parseInt(LIGNES.value) > 1 && parseInt(LIGNES.value) <= 30) {
         grid_lines = parseInt(LIGNES.value);
+        
+        nom_joueur1 = prompt("Joueur 1, entrez votre nom !", "Joueur 1");
+        nom_joueur2 = prompt("Joueur 2, entrez votre nom !", "Joueur 2");
 
-    LIGNES.value = grid_lines;
+        if(nom_joueur1 === null || nom_joueur1 === "")
+            nom_joueur1 = "Joueur 1";
 
-    game = new Game();
-    resetBoard();
+        if(nom_joueur2 === null || nom_joueur2 === "")
+            nom_joueur2 = "Joueur 2";
 
-    updateDisplay();
+        game = new Game();
+        resetBoard();
+
+        updateDisplay();
+    } else {
+        alert("La grille doit contenir entre 2 et 30 lignes seulement !");
+    }
 }
 
 function checkBoard()
@@ -289,32 +298,32 @@ function checkBoard()
 function resetBoard(board = BOARD)
 {
     board.innerHTML = "";
-    Array.from(Array(parseInt(grid_lines*grid_lines)).keys(), () => {
+    for(let c of Array(parseInt(grid_lines*grid_lines))) {
         let cur_case = new Case();
         game.addCase(cur_case);
         board.appendChild(game.getBoardCases()[cur_case.getId()].getElement());
-    });
+    }
     
     let gridStyle = "";
-    Array.from(Array(grid_lines).keys(), () => {
+    for(let c of Array(grid_lines)) {
         gridStyle += "1fr ";
-    });
+    }
     BOARD.style.gridTemplateColumns = gridStyle;
 }
 
 function updateDisplay()
 {
     START.innerHTML = "RELANCER UNE PARTIE !"
-    if(!game.isEnded()) 
+    if(!game.isEnded())
     {
         if(game.getCurrentPlayer() === Players.PLAYER_1)
         {
-            INFOS.innerHTML = "Joueur 1, à vous !";
+            INFOS.innerHTML = nom_joueur1 + ", à vous !";
             BOARD.style.cursor = "url('static/img/player1.cur'), pointer";
         }
         else
         {
-            INFOS.innerHTML = "Joueur 2, à vous !";
+            INFOS.innerHTML = nom_joueur2 + ", à vous !";
             BOARD.style.cursor = "url('static/img/player2.cur'), pointer";
         }
     } else {
@@ -327,9 +336,9 @@ function displayResults()
     if(game.isEnded())
     {
         if(game.getWinner() === Players.PLAYER_1)
-            INFOS.innerHTML = "Joueur 1, vous avez gagné, bravo !";
+            INFOS.innerHTML = nom_joueur1 + ", vous avez gagné, bravo !";
         else if(game.getWinner() === Players.PLAYER_2)
-            INFOS.innerHTML = "Joueur 2, vous avez gagné, bravo !";
+            INFOS.innerHTML = nom_joueur2 + ", vous avez gagné, bravo !";
         else
             INFOS.innerHTML = "C'est une égalité !";
 
