@@ -20,3 +20,7 @@ h2 {
     letter-spacing: 5px ;
 }
 
+main a:hover {
+    text-shadow: 0.1em -0.1em #358fa3;
+    border-bottom:3px solid purple;
+}
