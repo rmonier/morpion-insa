@@ -59,7 +59,7 @@ nav li a {
 }
 
 nav li:nth-child(1){
-    position: absolute;
+    position: fixed;
     left: 30px;
 }
 
@@ -71,7 +71,7 @@ nav li:nth-child(2){
 
 
 nav li:nth-child(3){
-    position: absolute;
+    position: fixed;
     right: 30px;
 }
 
@@ -85,7 +85,7 @@ footer ul {
 }
 
 footer li:nth-child(1) {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     left: 30px;
 }
@@ -115,7 +115,7 @@ footer li:nth-child(2) a {
 }
 
 footer li:nth-child(3) {
-    position: absolute;
+    position: fixed;
     bottom: 30px ;
     right: 30px;
 }
