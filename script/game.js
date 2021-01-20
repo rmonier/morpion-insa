@@ -181,7 +181,7 @@ Case.prototype.getElement = function() {
 };
 
 /**
- * Lance ou relance une partie
+ * Lance ou relance une partie en demandant les noms aux joueurs et en vérifiant la grille 
  */
 function launchGame()
 {
@@ -321,7 +321,7 @@ function checkBoard()
             nb_tot++;
     }
     
-    // Si on a une égalitét (toutes cases remplies)
+    // Si on a une égalité (toutes cases remplies)
     if(nb_tot === grid_lines*grid_lines)
         game.setEnd(true);
 }
