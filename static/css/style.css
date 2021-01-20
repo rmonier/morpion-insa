@@ -14,9 +14,23 @@ html{
 body
 {
     min-width: 500px;
+    margin : 8px 0px 0px 0px;
+    overflow-x :hidden;
 }
 
-/* DEBUT DU HEADER*/ 
+li{
+    list-style: none ;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;    
+}
+
+
+
+/*DEBUT DU HEADER*/ 
 
 header
 {
@@ -31,16 +45,6 @@ header h1, header h1 img
     margin: auto;
 }
 
-li{
-    list-style: none ;
-}
-
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
 header nav ul
 {
     display: grid;
@@ -48,10 +52,10 @@ header nav ul
     margin: 0;
     padding: 0;
     margin-top: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
-nav {
+header nav {
     text-transform: uppercase;
     text-align: center;
     font-style: italic;
@@ -61,68 +65,79 @@ nav {
     padding : 0px;
 }
 
-nav li a:hover {
+
+header nav li {
+    transform: rotate(-9deg);
+}
+
+header nav li a {
+    width:100px;
+    padding:5px;
+}
+header nav li a:hover {
     text-shadow: 0.1em -0.1em #358fa3;
     border-bottom:3px solid purple;
 }
 
-nav li {
-    transform: rotate(-9deg);
+/*FIN DU HEADER*/
+
+
+/*DEBUT DU MAIN*/
+
+.titrepage {
+    font-size:60px ;
+    font-variant: small-caps;
+    color:gainsboro;
+    padding-left:5vw;
+    letter-spacing: 5px ;
+    text-align: left;
 }
 
-nav li a {
-    width:100px;
-    padding:5px;
+.paragraphe {
+    font-size:15px ;
+    color:gainsboro;
+    text-align: justify;
+    padding-left:15vw;
+    padding-right:15vw;
+
 }
 
-/* FIN DU HEADER*/
+.signature{
+    padding-top:30px;
+}
+main{
+    height : 80vh;
+}
+
+/*FIN DU MAIN*/
+
 
 /*DEBUT DU FOOTER*/
 
+footer {
+    background-color:rgb(22, 22, 22);
+    margin-top: -50px;
+}
+
 footer ul {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     color:white;
+    text-align:center;
+    margin : 0;
+    padding: 0;
+}
+footer li:nth-child(3){
+    padding-top: 50px;
 }
 
-footer li:nth-child(1) {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-}
-
-footer li:nth-child(1) a {
+footer li a {
     text-transform: uppercase;
-    font-weight: bold;
 }
 
-footer li:nth-child(2){
-    width: 600px;
-    position: fixed;
-    bottom: 30px;
-    left: 47%;
-    
-}
-
-footer li:nth-child(2) p {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-
-footer li:nth-child(2) a {
-    -webkit-text-stroke: 0.5px white ;
-    -webkit-text-fill-color: transparent;
-}
-
-footer li:nth-child(3) {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-}
-
-footer a:hover {
+footer li a:hover {
     text-shadow: 0.1em -0.1em #358fa3;
-    border-bottom:2px solid purple;
+    border-bottom:3px solid purple;
 }
 
 /*FIN DU FOOTER*/

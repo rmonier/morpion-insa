@@ -30,7 +30,6 @@ h2 {
 }
 
 h2 > span {
-
     -webkit-text-stroke: 0.1px white ;
     -webkit-text-fill-color: transparent;
 }
@@ -83,11 +82,10 @@ button:hover {
 }
 
 footer {
-    color:white ;
-}
-
-footer ul {
+    background-color: transparent;
     display : flex;
-    bottom: 30px;
-    left: 30px;
+    color:white ;
+    margin-top: 12vh;
+    margin-left: 30px;
+
 }

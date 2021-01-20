@@ -4,20 +4,7 @@ nav li:nth-child(3) a {
     font-size: 40px;
 }
 
-main {
-    font-size:15px ;
-    color:gainsboro;
-    text-align: justify;
-    padding-left:20vw;
-}
 
-h2 {
-    font-size:60px ;
-    font-variant: small-caps;
-    color:gainsboro;
-    padding-top:10vh;
-    padding-left:5vw;
-    letter-spacing: 5px ;
-}
+
 
 

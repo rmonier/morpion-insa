@@ -4,22 +4,6 @@ nav li:nth-child(1) a {
     font-size: 40px;
 }
 
-main {
-    font-size:15px ;
-    color:gainsboro;
-    padding: 0px 200px ;
-    text-align: justify;
-}
-
-h2 {
-    font-size:60px ;
-    font-variant: small-caps;
-    color:gainsboro;
-    padding-top:100px;
-    padding-left:80px ;
-    letter-spacing: 5px ;
-}
-
 main a:hover {
     text-shadow: 0.1em -0.1em #358fa3;
     border-bottom:3px solid purple;
