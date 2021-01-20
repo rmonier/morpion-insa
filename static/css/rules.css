@@ -4,6 +4,13 @@ nav li:nth-child(1){
     font-size: 40px;
 }
 
+main {
+    font-size:15px ;
+    color:gainsboro;
+    padding: 0px 200px ;
+    text-align: justify;
+}
+
 h2 {
     font-size:60px ;
     font-variant: small-caps;
@@ -13,12 +20,3 @@ h2 {
     letter-spacing: 5px ;
 }
 
-
-main {
-    font-size:15px ;
-    color:gainsboro;
-    padding-top:200px;
-    padding-left:200px ;
-    text-align: justify;
-    
-}

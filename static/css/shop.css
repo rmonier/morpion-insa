@@ -1,3 +1,10 @@
+main {
+    font-size:15px ;
+    color:gainsboro;
+    padding: 0px 200px ;
+    text-align: justify;
+}
+
 h2 {
     font-size:60px ;
     font-variant: small-caps;
@@ -6,15 +13,6 @@ h2 {
     padding-left:80px ;
     letter-spacing: 5px ;
 }
-
-
-main p {
-    font-size:15px ;
-    color:gainsboro;
-    padding-left:200px ;
-    text-align: justify;
-}
-
 
 main p:nth-child(5){
     padding-top:30px;

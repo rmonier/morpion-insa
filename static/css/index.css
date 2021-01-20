@@ -1,27 +1,13 @@
 html {
     background-image: url("../img/Web_1920_3.png") ;
     background-size: 100%;
-}
-
-html, button {
     font-family: 'Agency FB' ;
-}
-
-a {
-    text-decoration:none ;
-    color:white ;
 }
 
 main {
     display: flex;
     flex-direction: column ;
     align-items: center;
-}
-
-h2 > span {
-
-    -webkit-text-stroke: 2px white ;
-    -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -37,6 +23,16 @@ h2 {
     flex-direction: column;
     justify-content: center;
     letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    color:white ;
+    transform: rotate(-9deg);
+}
+
+h2 > span {
+
+    -webkit-text-stroke: 0.1px white ;
+    -webkit-text-fill-color: transparent;
 }
 
 h3 {
@@ -47,32 +43,22 @@ h3 {
     width: 550px ;
     margin-bottom: min(150px, 15%);
     letter-spacing: 3px;
-
+    text-transform: uppercase;
+    text-align: center;
+    color:white ;
+    transform: rotate(-9deg);
 }
 
-footer ul {
+.boutons {
     display: flex;
 }
 
-footer li:nth-child(1) {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
+li{
+    list-style: none ;
 }
 
-footer li:nth-child(2){
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-}
-
-h2, h3, button {
-    text-transform: uppercase;
-    text-align: center;
-}
-
-h2, h3, button, footer {
-
+a {
+    text-decoration:none ;
     color:white ;
 }
 
@@ -85,6 +71,10 @@ button {
     width: 180px;
     margin-right: 50px ;
     letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Agency FB' ;
+    color:white ;
 }
 
 button:hover {
@@ -92,14 +82,12 @@ button:hover {
     background-color: rgba(255,255,255, 0.2);
 }
 
-li{
-    list-style: none ;
+footer {
+    color:white ;
 }
 
-.boutons {
-    display: flex;
-}
-
-h2, h3 {
-    transform: rotate(-9deg);
+footer ul {
+    display : flex;
+    bottom: 30px;
+    left: 30px;
 }
