@@ -27,7 +27,6 @@ button:hover {
 }
 
 #choix {
-    margin-left: 70px;
     color : white;
     font-size: large;
 }
@@ -61,6 +60,7 @@ button:hover {
 #start
 {
     text-align: center;
+    margin: auto;
 }
 
 .cellule
@@ -79,4 +79,10 @@ button:hover {
 .cellule:hover
 {
     filter: brightness(50%);
+}
+
+#morpion
+{
+    margin: auto;
+    text-align: center;
 }
