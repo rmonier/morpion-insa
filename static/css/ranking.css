@@ -1,4 +1,4 @@
-nav li:nth-child(3){
+nav li:nth-child(3) a {
     text-shadow: 0.1em -0.1em #358fa3;
     border-bottom:3px solid purple;
     font-size: 40px;
@@ -7,16 +7,16 @@ nav li:nth-child(3){
 main {
     font-size:15px ;
     color:gainsboro;
-    padding: 0px 200px ;
     text-align: justify;
+    padding-left:20vw;
 }
 
 h2 {
     font-size:60px ;
     font-variant: small-caps;
     color:gainsboro;
-    padding-top:100px;
-    padding-left:80px ;
+    padding-top:10vh;
+    padding-left:5vw;
     letter-spacing: 5px ;
 }
 

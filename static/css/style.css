@@ -6,20 +6,30 @@
     src: local('Agency FB'), local('AgencyFB-Regular'), url("static/font/agency-fb.woff") format('woff'), url("static/font/agency-fb.ttf") format('truetype')
 }
 
+html{
+    background-color:rgb(38, 38, 38);
+    font-family: 'Agency FB';
+}
+
+body
+{
+    min-width: 500px;
+}
+
+/* DEBUT DU HEADER*/ 
+
+header
+{
+    display: grid;
+    grid-template-rows: "1fr";
+}
+
 header h1, header h1 img
 {
     padding-top : 5px;
     width: 250px;
     margin: auto;
 }
-
-html{
-    background-color:rgb(38, 38, 38);
-    font-family: 'Agency FB';
-}
-
-/* DEBUT DU HEADER*/ 
-
 
 li{
     list-style: none ;
@@ -29,6 +39,16 @@ li{
 a {
     text-decoration: none;
     color: white;
+}
+
+header nav ul
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    margin-bottom: 80px;
 }
 
 nav {
@@ -41,38 +61,18 @@ nav {
     padding : 0px;
 }
 
-nav li:hover {
+nav li a:hover {
     text-shadow: 0.1em -0.1em #358fa3;
     border-bottom:3px solid purple;
 }
 
 nav li {
-    margin-left:2px;
-    float:left;
-    top: 80px;
     transform: rotate(-9deg);
 }
 
 nav li a {
     width:100px;
     padding:5px;
-}
-
-nav li:nth-child(1){
-    position: fixed;
-    left: 30px;
-}
-
-
-nav li:nth-child(2){
-    position:fixed;
-    left: 47%;
-}
-
-
-nav li:nth-child(3){
-    position: fixed;
-    right: 30px;
 }
 
 /* FIN DU HEADER*/
@@ -116,7 +116,7 @@ footer li:nth-child(2) a {
 
 footer li:nth-child(3) {
     position: fixed;
-    bottom: 30px ;
+    bottom: 30px;
     right: 30px;
 }
 

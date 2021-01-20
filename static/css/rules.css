@@ -1,4 +1,4 @@
-nav li:nth-child(1){
+nav li:nth-child(1) a {
     text-shadow: 0.1em -0.1em #358fa3;
     border-bottom:3px solid purple;
     font-size: 40px;
