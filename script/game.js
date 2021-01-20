@@ -18,6 +18,9 @@ let grid_lines, nom_joueur1, nom_joueur2;
 
 START.addEventListener("click", launchGame);
 
+/**
+ * Gère le déroulement d'une partie
+ */
 function Game()
 {
     this.end = false;
@@ -62,6 +65,9 @@ Game.prototype.setCurrentPlayer = function(p) {
     return this;
 };
 
+/**
+ * Passe au tour suivant et change de joueur
+ */
 Game.prototype.nextRound = function()
 {
     if(this.getCurrentPlayer() === Players.PLAYER_1)
@@ -71,14 +77,26 @@ Game.prototype.nextRound = function()
 
     this.round++;
 
+    checkBoard();
+    updateDisplay();
+
     return this;
 };
 
+/**
+ * Ajoute une case au plateau
+ * @param {Case} cur_case 
+ */
 Game.prototype.addCase = function(cur_case) {
     this.board_cases[cur_case.getId()] = cur_case;
     return this;
 };
 
+/**
+ * Contient toutes les données d'une case (type, image) et lui associe un listener
+ * @param {CaseType} type 
+ * @param {string} img_src 
+ */
 function Case(type = CaseType.EMPTY_CASE, img_src = undefined)
 {
     this.id = last_id_case++;
@@ -90,6 +108,7 @@ function Case(type = CaseType.EMPTY_CASE, img_src = undefined)
 
     this.changeType(type, img_src);
 
+    // Si on clique dessus, on vérifie qu'elle est vide puis on change son type et passe au tour suivant
     this.element.addEventListener("click", function() {
         if((c = game.getBoardCases()[this.dataset.id]).getType() === CaseType.EMPTY_CASE && !game.isEnded()) {
             if(game.getCurrentPlayer() === Players.PLAYER_1)
@@ -97,12 +116,15 @@ function Case(type = CaseType.EMPTY_CASE, img_src = undefined)
             else
                 c.changeType(CaseType.PLAYER_2_CASE);
             game.nextRound();
-            checkBoard();
-            updateDisplay();
         }
     });
 }
 
+/**
+ * Change le type d'une case
+ * @param {CaseType} type 
+ * @param {string} img_src 
+ */
 Case.prototype.changeType = function(type, img_src = undefined)
 {
     this.type = type;
@@ -158,6 +180,9 @@ Case.prototype.getElement = function() {
     return this.element;
 };
 
+/**
+ * Lance ou relance une partie
+ */
 function launchGame()
 {
     last_id_case = 0;
@@ -183,6 +208,9 @@ function launchGame()
     }
 }
 
+/**
+ * Vérifie si le jeu est finie en scannant la grille
+ */
 function checkBoard()
 {
     let nb_j1 = 0, nb_j2 = 0, nb_tot = 0, nb_rows = grid_lines;
@@ -281,20 +309,27 @@ function checkBoard()
         cur_id += parseInt(nb_rows-1);
     }
     
+    // Si le nombre de case d'un joueur correspond à une ligne complète
     if(nb_j1 === nb_rows)
         game.setEnd(true).setWinner(Players.PLAYER_1);
     else if(nb_j2 === nb_rows)
         game.setEnd(true).setWinner(Players.PLAYER_2);
 
+    // On compte le nombre de case au total
     for(const k in game.getBoardCases()) {
         if(game.getBoardCases()[k].getType() !== CaseType.EMPTY_CASE)
             nb_tot++;
     }
     
+    // Si on a une égalitét (toutes cases remplies)
     if(nb_tot === grid_lines*grid_lines)
         game.setEnd(true);
 }
 
+/**
+ * On (ré)initialise le plateau
+ * @param {HTMLElement} board 
+ */
 function resetBoard(board = BOARD)
 {
     board.innerHTML = "";
@@ -308,9 +343,12 @@ function resetBoard(board = BOARD)
     for(let c of Array(grid_lines)) {
         gridStyle += "1fr ";
     }
-    BOARD.style.gridTemplateColumns = gridStyle;
+    BOARD.style.gridTemplateColumns = gridStyle; // On formate l'affichage
 }
 
+/**
+ * Affichage du message
+ */
 function updateDisplay()
 {
     START.innerHTML = "RELANCER UNE PARTIE !"
@@ -331,6 +369,9 @@ function updateDisplay()
     }
 }
 
+/**
+ * Affichage du message de fin de partie
+ */
 function displayResults()
 {
     if(game.isEnded())
